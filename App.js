@@ -8,7 +8,7 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import GoalsScreen from './src/screens/GoalsScreen';
 import ChatScreen from './src/screens/ChatScreen';
 import CaptureScreen from './src/screens/CaptureScreen';
-
+import RiskDetectorScreen from './src/screens/RiskDetectorScreen';
 
 import DashboardScreen from './src/screens/DashboardScreen';
 import TestScreen from './src/screens/TestScreen';
@@ -99,6 +99,17 @@ function HomeTabs() {
             <Ionicons name="chatbubble-ellipses-outline" size={size} color={color} />
           ),
           tabBarLabel: 'Coach'
+        }}
+      />
+
+      <Tab.Screen 
+        name="RiskDetector" 
+        component={RiskDetectorScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="shield-alert-outline" size={size} color={color} />
+          ),
+          tabBarLabel: 'Risk'
         }}
       />
 
