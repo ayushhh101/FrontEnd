@@ -140,7 +140,7 @@ export default function MoneyStoryScreen() {
           <Text
             style={{
               color: C.white,
-              fontSize: 18,
+              fontSize: 24,
               fontWeight: "700",
               textAlign: "center",
             }}
@@ -149,7 +149,7 @@ export default function MoneyStoryScreen() {
           </Text>
 
           {/* Month Name + Year */}
-          <Text style={{ color: C.gray, fontSize: 12, textAlign: "center" }}>
+          <Text style={{ color: C.gray, fontSize: 14, textAlign: "center" }}>
             {story?.month
               ? `${getMonthName(story.month)} ${new Date(
                   story?.timestamp

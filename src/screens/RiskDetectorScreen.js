@@ -149,11 +149,8 @@ const RiskDetectorScreen = () => {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton}>
-          <Ionicons name="chevron-back" size={28} color={C.white} />
-        </TouchableOpacity>
-        <View>
+      <View style={[styles.header, { borderBottomWidth: 1, borderBottomColor: '#2d2d44', paddingVertical: 12 }]}>
+        <View style={{ alignItems: 'center' }}>
           <Text style={styles.headerTitle}>Risk Detector</Text>
           <Text style={styles.headerSubtitle}>Proactive spending alerts</Text>
         </View>
@@ -381,23 +378,26 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingTop: 50,
+    paddingTop: 10,
     paddingBottom: 20,
   },
-  backButton: {
-    marginRight: 15,
-  },
+  // backButton: {
+  //   marginRight: 15,
+  // },
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     color: C.white,
+    textAlign: 'center',
   },
   headerSubtitle: {
     fontSize: 14,
     color: C.gray,
     marginTop: 2,
+    textAlign: 'center',
   },
   scrollView: {
     flex: 1,
@@ -408,6 +408,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 30,
     marginBottom: 25,
+    marginTop: 20,
     alignItems: 'center',
   },
   riskLevelTitle: {
