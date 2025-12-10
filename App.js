@@ -19,6 +19,7 @@ import OTPVerificationScreen from './src/screens/OTPVerificationScreen';
 import ProfileSetupScreen from './src/screens/ProfileSetupScreen';
 import PermissionsScreen from './src/screens/PermissionsScreen';
 import SMSParserScreen from './src/screens/SMSParserScreen';
+import MoneyStoryScreen from './src/screens/MoneyStoryScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -111,6 +112,18 @@ function HomeTabs() {
           tabBarLabel: 'Capture'
         }}
       />
+
+      <Tab.Screen 
+        name="Story" 
+        component={MoneyStoryScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="book-outline" size={size} color={color} />
+          ),
+          tabBarLabel: 'Story'
+        }}
+      />
+
       
       
       
