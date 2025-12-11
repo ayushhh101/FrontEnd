@@ -20,11 +20,13 @@ import ProfileSetupScreen from './src/screens/ProfileSetupScreen';
 import PermissionsScreen from './src/screens/PermissionsScreen';
 import SMSParserScreen from './src/screens/SMSParserScreen';
 import MoneyStoryScreen from './src/screens/MoneyStoryScreen';
+import NotificationScreen from './src/screens/NotificationScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-// Colors for consistent theming
+
 const C = {
   bg: '#0f0f1a', 
   card: '#1a1a2e', 
@@ -135,6 +137,18 @@ function HomeTabs() {
         }}
       />
 
+      <Tab.Screen 
+        name="Profile" 
+        component={ProfileScreen} 
+        options={{
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons name="account-circle" color={color} size={size} />
+            ),
+            tabBarLabel: "Profile"
+        }}
+    />
+
       
       
       
@@ -159,6 +173,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="OTPVerification" component={OTPVerificationScreen} />
         <Stack.Screen name="SMSParser" component={SMSParserScreen} />
+        <Stack.Screen name="Notifications" component={NotificationScreen} />
 
         {/* The screen WITH Tabs (The Main App) */}
         {/* We call the Tab Navigator component here. When the user navigates here, 
